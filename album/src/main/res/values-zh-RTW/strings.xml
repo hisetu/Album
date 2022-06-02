@@ -47,7 +47,7 @@
     <string name="album_permission_camera_video_failed_hint">沒有相機、存儲或者錄音權限，請在使用前授權。</string>
 
     <plurals name="album_check_image_limit">
-        <item quantity="other">您只能選擇%1$d個圖片文件</item>
+        <item quantity="other">您只能選擇%1$d張圖片</item>
     </plurals>
 
     <plurals name="album_check_image_limit_camera">
