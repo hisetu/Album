@@ -17,12 +17,9 @@ package com.yanzhenjie.album.sample.app;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,6 +36,10 @@ import com.yanzhenjie.album.widget.divider.Api21ItemDivider;
 import com.yanzhenjie.album.widget.divider.Divider;
 
 import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by YanZhenjie on 2017/8/17.

@@ -17,9 +17,10 @@ package com.yanzhenjie.album.widget.divider;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.support.annotation.ColorInt;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.annotation.ColorInt;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * <p>The implementation of divider adds dividers around the list.</p>

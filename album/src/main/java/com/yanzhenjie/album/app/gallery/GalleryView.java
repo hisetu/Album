@@ -18,8 +18,6 @@ package com.yanzhenjie.album.app.gallery;
 import android.app.Activity;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.AppCompatCheckBox;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +25,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.AppCompatCheckBox;
+import androidx.viewpager.widget.ViewPager;
 
 import com.yanzhenjie.album.Album;
 import com.yanzhenjie.album.AlbumFile;

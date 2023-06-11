@@ -17,13 +17,14 @@ package com.yanzhenjie.album.mvp;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.StringRes;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * Created by YanZhenjie on 2017/12/8.

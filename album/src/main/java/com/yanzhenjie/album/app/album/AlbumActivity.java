@@ -18,14 +18,16 @@ package com.yanzhenjie.album.app.album;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.PopupMenu;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.PopupMenu;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 import com.yanzhenjie.album.Action;
 import com.yanzhenjie.album.Album;
@@ -108,7 +110,10 @@ public class AlbumActivity extends BaseActivity implements
         mView.setCompleteDisplay(false);
         mView.setLoadingDisplay(true);
 
-        requestPermission(PERMISSION_STORAGE, CODE_PERMISSION_STORAGE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+            requestPermission(PERMISSION_STORAGE_33, CODE_PERMISSION_STORAGE);
+        else
+            requestPermission(PERMISSION_STORAGE, CODE_PERMISSION_STORAGE);
     }
 
     private void initializeArgument() {

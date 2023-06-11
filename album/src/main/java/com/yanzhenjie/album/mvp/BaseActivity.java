@@ -19,11 +19,12 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.PermissionChecker;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.PermissionChecker;
 
 import com.yanzhenjie.album.Album;
 import com.yanzhenjie.album.util.AlbumUtils;
@@ -38,8 +39,11 @@ import java.util.Locale;
 public class BaseActivity extends AppCompatActivity implements Bye {
 
     public static final String[] PERMISSION_TAKE_PICTURE = {"android.permission.CAMERA", "android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"};
+    public static final String[] PERMISSION_TAKE_PICTURE_33 = {"android.permission.CAMERA", "android.permission.READ_MEDIA_IMAGES"};
     public static final String[] PERMISSION_TAKE_VIDEO = {"android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"};
+    public static final String[] PERMISSION_TAKE_VIDEO_33 = {"android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_MEDIA_VIDEO"};
     public static final String[] PERMISSION_STORAGE = {"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"};
+    public static final String[] PERMISSION_STORAGE_33 = {"android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

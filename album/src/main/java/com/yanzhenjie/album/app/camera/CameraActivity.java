@@ -18,10 +18,12 @@ package com.yanzhenjie.album.app.camera;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import com.yanzhenjie.album.Action;
 import com.yanzhenjie.album.Album;
@@ -84,13 +86,19 @@ public class CameraActivity extends BaseActivity {
                 case Album.FUNCTION_CAMERA_IMAGE: {
                     if (TextUtils.isEmpty(mCameraFilePath))
                         mCameraFilePath = AlbumUtils.randomJPGPath(this);
-                    requestPermission(PERMISSION_TAKE_PICTURE, CODE_PERMISSION_IMAGE);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+                        requestPermission(PERMISSION_TAKE_PICTURE_33, CODE_PERMISSION_IMAGE);
+                    else
+                        requestPermission(PERMISSION_TAKE_PICTURE, CODE_PERMISSION_IMAGE);
                     break;
                 }
                 case Album.FUNCTION_CAMERA_VIDEO: {
                     if (TextUtils.isEmpty(mCameraFilePath))
                         mCameraFilePath = AlbumUtils.randomMP4Path(this);
-                    requestPermission(PERMISSION_TAKE_VIDEO, CODE_PERMISSION_VIDEO);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+                        requestPermission(PERMISSION_TAKE_VIDEO_33, CODE_PERMISSION_VIDEO);
+                    else
+                        requestPermission(PERMISSION_TAKE_VIDEO, CODE_PERMISSION_VIDEO);
                     break;
                 }
                 default: {

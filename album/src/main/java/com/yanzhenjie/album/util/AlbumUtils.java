@@ -27,15 +27,16 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.ColorInt;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.webkit.MimeTypeMap;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.yanzhenjie.album.provider.CameraFileProvider;
 import com.yanzhenjie.album.widget.divider.Api20ItemDivider;
