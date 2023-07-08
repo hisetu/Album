@@ -86,8 +86,10 @@ public class CameraActivity extends BaseActivity {
                 case Album.FUNCTION_CAMERA_IMAGE: {
                     if (TextUtils.isEmpty(mCameraFilePath))
                         mCameraFilePath = AlbumUtils.randomJPGPath(this);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+                    else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
                         requestPermission(PERMISSION_TAKE_PICTURE_33, CODE_PERMISSION_IMAGE);
+                    else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.Q)
+                        requestPermission(PERMISSION_TAKE_PICTURE_30, CODE_PERMISSION_IMAGE);
                     else
                         requestPermission(PERMISSION_TAKE_PICTURE, CODE_PERMISSION_IMAGE);
                     break;
@@ -97,6 +99,8 @@ public class CameraActivity extends BaseActivity {
                         mCameraFilePath = AlbumUtils.randomMP4Path(this);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
                         requestPermission(PERMISSION_TAKE_VIDEO_33, CODE_PERMISSION_VIDEO);
+                    else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.Q)
+                        requestPermission(PERMISSION_TAKE_PICTURE_30, CODE_PERMISSION_IMAGE);
                     else
                         requestPermission(PERMISSION_TAKE_VIDEO, CODE_PERMISSION_VIDEO);
                     break;

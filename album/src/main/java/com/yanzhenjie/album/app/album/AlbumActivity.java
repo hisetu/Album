@@ -112,6 +112,8 @@ public class AlbumActivity extends BaseActivity implements
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
             requestPermission(PERMISSION_STORAGE_33, CODE_PERMISSION_STORAGE);
+        else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.Q)
+            requestPermission(PERMISSION_STORAGE_30, CODE_PERMISSION_STORAGE);
         else
             requestPermission(PERMISSION_STORAGE, CODE_PERMISSION_STORAGE);
     }
